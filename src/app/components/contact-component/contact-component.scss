@@ -1,0 +1,46 @@
+main {
+  color: white;
+  width: 80%;
+  padding-top: 100px;
+  margin: 0 auto;
+  .title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, white, transparent);
+    }
+  }
+  .contacts-icons {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .icon-link:hover {
+    transform: translateY(-4px) scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
+  }
+
+  .icon-svg {
+    width: 72px;
+    height: 72px;
+  }
+}

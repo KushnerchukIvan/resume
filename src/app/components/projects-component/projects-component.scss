@@ -1,0 +1,100 @@
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+.main {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  .title {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, white, transparent);
+    }
+  }
+  .cards {
+    .card {
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #a020f0;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 2px;
+        background: conic-gradient(
+          from var(--angle),
+          transparent 80deg,
+          #6d28d9 85deg,
+          #c4b5fd 90deg,
+          #6d28d9 95deg,
+          transparent 100deg,
+          transparent 360deg
+        );
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: spin var(--speed, 6s) linear infinite;
+        pointer-events: none;
+      }
+      .preTitle {
+        color: rgb(0, 98, 255);
+      }
+      p,
+      ul {
+        opacity: 0.7;
+      }
+      .technologies {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        .technic {
+          display: block;
+          background: rgba(111, 111, 255, 0.43);
+          border: 1px solid white;
+          border-radius: 5px;
+          padding: 5px;
+          font-size: smaller;
+        }
+      }
+      .watchProj {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: baseline;
+        margin-top: 10px;
+        gap: 10px;
+        a {
+          text-decoration: none;
+          color: rgb(0, 98, 255);
+        }
+      }
+    }
+  }
+}
