@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/resume": {},
+    "/resume/about": {},
+    "/resume/contact": {},
+    "/resume/projects": {},
+    "/resume/skills": {}
+  }
+}
