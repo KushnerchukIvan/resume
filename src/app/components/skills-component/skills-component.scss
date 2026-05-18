@@ -1,43 +1,74 @@
-.main{
-    width: 80%;
-    margin: 0 auto;
-    h1{
-        color: white;        
+.main {
+  width: min(90%, 1400px);
+  margin: 0 auto;
+
+  h1 {
+    color: white;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    gap: clamp(12px, 2vw, 24px);
+  }
+
+  .line {
+    flex: 1;
+    height: 1px;
+
+    background: linear-gradient(90deg, white, transparent);
+  }
+
+  .cards {
+    display: grid;
+
+    /* автоматична адаптивна сітка */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: clamp(15px, 2vw, 25px);
+
+    margin-top: 40px;
+  }
+
+  .card {
+    min-height: 120px;
+
+    border: 1px solid rgb(136, 136, 136);
+    border-radius: 12px;
+
+    background: rgb(0, 3, 26);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 20px;
+
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      border-color: blue;
     }
-    .title{
-        padding-top: 100px;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: 1.5rem;
+
+    h3 {
+      font-size: clamp(1rem, 2vw, 1.2rem);
     }
-    .line{
-        flex: 1;
-        height: 1px;
-        background: linear-gradient(90deg, white, transparent);
+
+    p {
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      text-align: center;
     }
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(4, 150px);
-        gap: 20px;
-        justify-content: center;
-        margin-top: 40px;
-        .card{
-            width: 150px;
-            height: 100px;
-            border: 1px solid rgb(136, 136, 136);
-            border-radius: 10px;
-            background: rgb(0, 3, 26);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            &:hover{
-                transform: translateY(-4px);
-                border: 1px solid blue;
-            }
-        }
-    }
+  }
 }

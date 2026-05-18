@@ -23,6 +23,7 @@ export class HomePage implements OnInit, OnDestroy {
   @Input() speed = 80;
 
   displayText = signal('');
+  photoUrl = 'images/my_photo.jpg';
 
   private wordIndex = 0;
   private charIndex = 0;

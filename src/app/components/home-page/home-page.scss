@@ -1,117 +1,282 @@
-@keyframes blink {50%{opacity: 0;}}
-.main{
-    background: linear-gradient(to right, #000, rgb(0, 0, 40));
-    margin-top: 79px;
-    position: relative;
-    z-index: 1;
-    img{
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        top: 5rem;
-        left: 70%;
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.main {
+  background: linear-gradient(to right, #000, rgb(0, 0, 40));
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: calc(100vh - 79px);
+
+  img {
+    position: absolute;
+    width: clamp(120px, 18vw, 200px);
+    height: clamp(120px, 18vw, 200px);
+    object-fit: cover;
+    top: 4rem;
+    right: 8%;
+    border: 1px solid #a020f0;
+    border-radius: 50%;
+  }
+
+  .mainDiv {
+    width: min(90%, 1400px);
+    margin: 0 auto;
+    padding-top: 2rem;
+
+    h1 {
+      font-family: sans-serif;
+      font-size: clamp(2.5rem, 7vw, 7rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+    }
+
+    .first {
+      color: white;
+      font-weight: bolder;
+    }
+
+    .last {
+      -webkit-text-stroke: 1px #a020f0;
+      color: transparent;
+    }
+
+    .typed {
+      color: rgb(0, 184, 184);
+      margin-left: 9px;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background: var(--purple, #a855f7);
+      color: #a855f7;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    p {
+      margin-left: 9px;
+      color: rgb(0, 184, 184);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .home_buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+
+      button {
+        transition: 0.3s ease;
+        cursor: pointer;
+      }
+
+      .VIEW_PROJECTS_BUTTON {
+        background: #a020f0;
         border: 1px solid #a020f0;
-        border-radius: 100px;
+        border-radius: 5px;
+        color: white;
+        width: 200px;
+        height: 50px;
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+
+        &:hover {
+          box-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
+          transform: translateY(-2px);
+        }
+      }
+
+      .CONTACT_BUTTON {
+        width: 150px;
+        height: 50px;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.308);
+        border-radius: 5px;
+        color: white;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.308);
+          border-color: white;
+        }
+      }
     }
-    .mainDiv{
-        width: 80%;
+
+    .about-me-home-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4rem;
+      margin-top: 5rem;
+      color: white;
+
+      .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .num {
+          font-size: clamp(1.8rem, 4vw, 2.2rem);
+          font-weight: 800;
+          color: #a020f0;
+          line-height: 1;
+        }
+
+        .label {
+          font-family: var(--mono);
+          font-size: 0.72rem;
+          color: var(--muted);
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-top: 0.3rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* ========================= */
+/* ======= LAPTOP ========= */
+/* ========================= */
+
+@media (max-width: 1200px) {
+  .main {
+    img {
+      right: 4%;
+      top: 3rem;
+    }
+
+    .mainDiv {
+      width: 92%;
+    }
+  }
+}
+
+/* ========================= */
+/* ======= TABLET ========= */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .main {
+    padding-top: 2rem;
+
+    img {
+      position: static;
+      display: block;
+      margin: 0 auto 3rem;
+    }
+
+    .mainDiv {
+      text-align: center;
+
+      p {
         margin: 0 auto;
-        padding-top: 1px;
-        h1{
-            font-family: sans-serif;
-            font-size: clamp(2.5rem, 7vw, 7rem);
-            font-weight: 800;
-            line-height: 1.0;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-        }
-        .first{
-            color: white;
-            font-weight: bolder;
-            width: auto;
-            height: auto;
-        }
-        .last{
-            -webkit-text-stroke: 1px #a020f0; 
-            width: auto;
-            height: auto;
-        }
-        .typed{
-            color: rgb(0, 184, 184);
-            margin-left: 9px;
-        }
-        .cursor{
-            display: inline-block;
-            width: 2px;
-            height: 1.1em;
-            background: var(--purple, #a855f7);
-            color: #a855f7;
-            margin-left: 4px;
-            vertical-align: middle;
-            animation: blink 1s step-end infinite;
-        }  
-        p{
-            margin-left: 9px;
-            color: rgb(0, 184, 184);
-            font-size: 20px;
-        }
-        .home_buttons{
-            display: flex;
-            flex-wrap: wrap;
-            align-content: center;
-            gap: 20px;
-            margin-top: 40px;
-            .VIEW_PROJECTS_BUTTON{
-                background: #a020f0;
-                border: 1px solid #a020f0;
-                border-radius: 5px;
-                color: white;
-                width: 200px;
-                height: 50px;
-                box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
-                
-                &:hover{
-                    box-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
-                    transform: translateY(-2px);
-                }
-            }
-            .CONTACT_BUTTON{
-                width: 150px;
-                height: 50px;
-                background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.308);
-                border-radius: 5px;
-                color: white;
-                &:hover{
-                    background: rgba(255, 255, 255, 0.308);
-                    border-color: white;
-                }
-            }
-        }
-        .about-me-home-block{
-            display: flex;
-            gap: 8rem;
-            margin-top: 5rem;
-            color: white;
-            .block{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .num{
-                    font-size: 2.2rem;
-                    font-weight: 800;
-                    color: #a020f0;
-                    line-height: 1;
-                }
-                .label{
-                    font-family: var(--mono);
-                    font-size: 0.72rem;
-                    color: var(--muted);
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                    margin-top: 0.3rem;
-                }
-            }
-        }
+      }
+
+      .typed {
+        margin-left: 0;
+      }
+
+      .home_buttons {
+        justify-content: center;
+      }
+
+      .about-me-home-block {
+        justify-content: center;
+        gap: 3rem;
+      }
     }
+  }
+}
+
+/* ========================= */
+/* ======= MOBILE ========= */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 70px;
+    padding: 30px 0;
+
+    .mainDiv {
+      padding-top: 1rem;
+
+      h1 {
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .home_buttons {
+        flex-direction: column;
+        align-items: stretch;
+
+        .VIEW_PROJECTS_BUTTON,
+        .CONTACT_BUTTON {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .about-me-home-block {
+        gap: 2rem;
+
+        .block {
+          width: calc(50% - 1rem);
+        }
+      }
+    }
+  }
+}
+
+/* ========================= */
+/* ===== SMALL MOBILE ===== */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .main {
+    img {
+      width: 110px;
+      height: 110px;
+    }
+
+    .mainDiv {
+      width: 94%;
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .typed {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .about-me-home-block {
+        flex-direction: column;
+        align-items: center;
+
+        .block {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
