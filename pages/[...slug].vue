@@ -1,0 +1,1 @@
+<template><div class="section-wrap not-found"><p class="eyebrow">404 — СТОРІНКУ НЕ ЗНАЙДЕНО</p><h1>Здається, тут<br><span class="serif-accent">поки порожньо.</span></h1><NuxtLink class="button button-dark" to="/">На головну <span>↗</span></NuxtLink></div></template>
