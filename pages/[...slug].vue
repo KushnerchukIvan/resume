@@ -1,1 +1,2 @@
-<template><div class="section-wrap not-found"><p class="eyebrow">404 — СТОРІНКУ НЕ ЗНАЙДЕНО</p><h1>Здається, тут<br><span class="serif-accent">поки порожньо.</span></h1><NuxtLink class="button button-dark" to="/">На головну <span>↗</span></NuxtLink></div></template>
+<script setup lang="ts">const { t } = useSiteI18n()</script>
+<template><div class="section-wrap not-found"><p class="eyebrow">{{ t('notFound.eyebrow') }}</p><h1 v-html="t('notFound.title')" /><NuxtLink class="button button-dark" to="/">{{ t('notFound.home') }} <span>↗</span></NuxtLink></div></template>
