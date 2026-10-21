@@ -14,21 +14,29 @@ export interface PortfolioProject {
 
 export const projects: PortfolioProject[] = [
   {
-    slug: 'uptowin', number: '01', name: 'Uptowin', category: 'Digital experience · Nuxt 3',
+    slug: 'fingrunt', number: '01', name: 'FinGrunt', category: 'Financial literacy · React',
+    description: 'Інтерактивний застосунок із фінансової грамотності: уроки, практичні калькулятори та інструменти для планування бюджету.',
+    longDescription: 'Освітній вебзастосунок, що поєднує короткі уроки з тестами та практичні інструменти для роботи з особистими фінансами. Дашборд показує доходи, витрати й заощадження; користувач може вести транзакції, встановлювати місячні бюджети, переглядати підказки на основі своїх даних і користуватися шістьма фінансовими калькуляторами. Інтерфейс доступний українською та англійською, а дані зберігаються локально в браузері.',
+    liveUrl: 'https://fin-grunt-b5xgachzj-kushnerchukivans-projects.vercel.app/',
+    repoUrl: 'https://github.com/KushnerchukIvan/FinGrunt',
+    stack: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS 4', 'React Router', 'Zustand', 'React Hook Form', 'Zod', 'Recharts', 'i18next', 'Lucide'], accent: 'lime', mark: 'F',
+  },
+  {
+    slug: 'uptowin', number: '02', name: 'Uptowin', category: 'Digital experience · Nuxt 3',
     description: 'Яскравий ігровий досвід із виразною айдентикою, динамічними переходами та увагою до кожної взаємодії.',
     longDescription: 'Практичний проєкт, у якому поєдналися сучасний стек Vue та Nuxt, адаптивний дизайн, локалізація й motion-дизайн. У фокусі — цілісний візуальний напрям, швидкий інтерфейс і послідовний досвід на різних екранах.',
     liveUrl: 'https://uptowin-m1jwp3dhs-kushnerchukivans-projects.vercel.app/',
     stack: ['Vue 3', 'Nuxt 3', 'TypeScript', 'Pinia', 'GSAP', 'Swiper', 'SCSS', 'i18next', 'Axios', 'Yup'], accent: 'lime', mark: 'U',
   },
   {
-    slug: 'flowboard', number: '02', name: 'Flowboard', category: 'Product UI · Nuxt 3',
+    slug: 'flowboard', number: '03', name: 'Flowboard', category: 'Product UI · Nuxt 3',
     description: 'Концепт командного робочого простору для проєктів, завдань і щоденної командної роботи.',
     longDescription: 'Багатосторінковий продукт із дашбордом, дошкою завдань та інструментами керування командою. Проєкт допоміг поглибити практику з Vue 3 Composition API, Nuxt, Pinia, типізацією та компонентною архітектурою.',
     liveUrl: 'https://flowboard-6gdk5qb28-kushnerchukivans-projects.vercel.app/auth',
     stack: ['Vue 3', 'Nuxt 3', 'TypeScript', 'Pinia', 'SCSS', 'GraphQL', 'Nuxt Image', 'JWT'], accent: 'blue', mark: 'F',
   },
   {
-    slug: 'library', number: '03', name: 'Library Authors', category: 'CRUD application · Angular',
+    slug: 'library', number: '04', name: 'Library Authors', category: 'CRUD application · Angular',
     description: 'Інтерфейс для керування авторами бібліотеки з повним циклом створення й редагування записів.',
     longDescription: 'Навчальний CRUD-застосунок, побудований у межах навчання в CyberBionic Systematics. В інтерфейсі реалізовано роботу зі списком авторів і основними операціями керування даними.',
     liveUrl: 'https://kushnerchukivan.github.io/library/authors',
@@ -36,7 +44,7 @@ export const projects: PortfolioProject[] = [
     stack: ['Angular 21', 'Angular CDK', 'Bootstrap', 'RxJS', 'TypeScript', 'REST API'], accent: 'orange', mark: 'L',
   },
   {
-    slug: 'ai-job-search', number: '04', name: 'AI Job Search', category: 'AI product · Angular',
+    slug: 'ai-job-search', number: '05', name: 'AI Job Search', category: 'AI product · Angular',
     description: 'Експеримент із пошуком вакансій, що поєднує генеративний AI та дані з пошукових сервісів.',
     longDescription: 'Навчальний портфоліо-проєкт із Angular, Gemini API та SerpAPI. Досліджує, як інтегрувати зовнішні сервіси в зрозумілий користувацький сценарій пошуку роботи.',
     liveUrl: 'https://ai-job-search-umber.vercel.app/',
@@ -44,7 +52,7 @@ export const projects: PortfolioProject[] = [
     stack: ['Angular 21', 'TypeScript', 'RxJS', 'Gemini API', 'SerpAPI'], accent: 'violet', mark: 'A',
   },
   {
-    slug: 'job-finder-backend', number: '05', name: 'Job Finder API', category: 'Backend API · Node.js',
+    slug: 'job-finder-backend', number: '06', name: 'Job Finder API', category: 'Backend API · Node.js',
     description: 'Backend для пошуку вакансій: збирає результати пошуку та використовує AI, щоб відфільтрувати релевантні пропозиції.',
     longDescription: 'REST API на Express.js, що отримує результати вакансій через SerpAPI та передає їх Gemini для відбору релевантних позицій. Конфігурація сервісів і ключів винесена в середовище, а API доступний клієнтському застосунку через HTTP endpoints.',
     repoUrl: 'https://github.com/KushnerchukIvan/job-finder-backend',
@@ -53,11 +61,12 @@ export const projects: PortfolioProject[] = [
 ]
 
 export const skillGroups = [
-  { title: 'Frontend', skills: ['Vue.js · 1 рік', 'Angular · 6 місяців', 'TypeScript · 6 місяців', 'JavaScript · 1 рік', 'HTML · 1 рік', 'CSS · 1 рік', 'Element UI · 1 рік'] },
+  { title: 'Frontend', skills: ['Vue.js · 1 рік', 'React', 'Angular · 6 місяців', 'TypeScript · 6 місяців', 'JavaScript · 1 рік', 'HTML · 1 рік', 'CSS · 1 рік', 'Element UI · 1 рік'] },
   { title: 'Vue та керування станом', skills: ['Nuxt.js · 1 рік', 'Vue Router · 1 рік', 'Pinia · 1 рік', 'Vuex · 1 рік'] },
   { title: 'API та backend', skills: ['REST API · 1 рік', 'GraphQL · 1 рік', 'JWT · 1 рік', 'Symfony 5', 'PHP', 'Doctrine ORM', 'SQL та міграції БД'] },
   { title: 'Графіка та анімація', skills: ['D3.js · 6 місяців', 'GSAP', 'Swiper'] },
   { title: 'Якість, продуктивність та інструменти', skills: ['Git · 1 рік', 'Lazy loading · 1 рік', 'Code splitting · 1 рік', 'Vite · 1 рік', 'Webpack · 1 рік', 'Vitest · 1 рік', 'Vue Test Utils · 1 рік', 'Playwright · 1 рік', 'i18next', 'Yup', 'ESLint'] },
+  { title: 'React та UI-інструменти', skills: ['React Router', 'Zustand', 'React Hook Form', 'Zod', 'Recharts', 'Tailwind CSS 4', 'Lucide'] },
 ]
 
 export const experienceHighlights = [
