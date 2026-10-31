@@ -42,7 +42,7 @@ onBeforeUnmount(() => heroContext?.revert())
       </div>
       <div class="hero-art" :aria-label="t('home.art')" role="img">
         <div class="art-grid" /><div class="art-orbit orbit-one" /><div class="art-orbit orbit-two" /><div class="art-core"><span>IK</span><small>FRONTEND<br>DEVELOPER</small></div>
-        <span class="art-label label-top">VUE / NUXT</span><span class="art-label label-bottom">DESIGN × CODE</span><span class="art-spark">✳</span>
+        <span class="art-label label-top">VUE / NUXT</span><span class="art-label label-next">NEXT / REACT</span><span class="art-label label-bottom">DESIGN × CODE</span><span class="art-spark">✳</span>
       </div>
     </section>
 
