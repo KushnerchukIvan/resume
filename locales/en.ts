@@ -12,9 +12,9 @@ export default {
   },
   about: {
     eyebrow: '01 — ABOUT ME', title: 'Code with character.<br><span class="serif-accent">Human by nature.</span>',
-    lead: 'I’m a frontend developer with three years of commercial experience. I combine interface development with backend logic and integrations.', contact: 'GET IN TOUCH',
+    lead: 'I’m a frontend developer with 1 year and 4 months of commercial experience. I combine interface development with backend logic and integrations.', contact: 'GET IN TOUCH',
     story: 'MY STORY', storyTitle: 'From business logic<br>to expressive interfaces.',
-    story1: 'I have three years of commercial experience, including work at Galanix on Utrigg, a SaaS analytics platform. I contributed to both client and server sides: building Vue 2 interfaces, developing REST endpoints with Symfony 5, and implementing business logic.',
+    story1: 'I have 1 year and 4 months of commercial experience — from May 2025 to August 2026 I worked at Galanix on Utrigg, a SaaS analytics platform. I contributed to both the client and server sides: building Vue 2 interfaces, developing REST endpoints with Symfony 5, and implementing business logic.',
     story2: 'I worked with the database through Doctrine ORM: updating entities, preparing and running migrations, and connecting the API with application data. On the frontend, I built analytics widgets and D3.js charts, report filters, and localization. Working across the stack helped me understand how interface decisions relate to APIs and data structures.',
     story3: 'I’m now growing this experience with Vue 3, Composition API, and Nuxt 3, building personal projects from interfaces through integrations.',
     toolkit: 'TOOLKIT', skills: 'Skills that <span class="serif-accent">get things done.</span>', education: 'EDUCATION',
@@ -22,8 +22,8 @@ export default {
   },
   projectsPage: { eyebrow: '02 — PORTFOLIO', title: 'Good ideas<br><span class="serif-accent">in motion.</span>', lead: 'Projects where I explored interfaces, tools, and ways to make digital experiences more expressive.', detail: 'Technologies & details', prompt: 'HAVE AN INTERESTING PROJECT?', cta: 'Let’s talk' },
   experience: {
-    eyebrow: '03 — EXPERIENCE', title: 'Experience<br><span class="serif-accent">that matters.</span>', lead: 'Three years of commercial work, ongoing learning, and personal projects — each step added a new perspective on frontend development.',
-    commercial: 'COMMERCIAL EXPERIENCE · 3 YEARS', company: 'GALANIX · UTRIGG', role: 'Frontend Intern → Junior Frontend Developer', summary: 'Three years on a SaaS analytics platform, developing frontend and backend features — from interfaces and charts to APIs and business logic.',
+    eyebrow: '03 — EXPERIENCE', title: 'Experience<br><span class="serif-accent">that matters.</span>', lead: 'One year and four months of commercial work, ongoing learning, and personal projects — each step added a new perspective on frontend development.',
+    commercial: 'COMMERCIAL EXPERIENCE · MAY 2025 — AUGUST 2026', company: 'GALANIX · UTRIGG', role: 'Frontend Intern → Junior Frontend Developer', summary: 'One year and four months on a SaaS analytics platform, developing frontend and backend features — from interfaces and charts to APIs and business logic.',
     highlights: ['Worked on both frontend and backend features for the Utrigg SaaS analytics platform.', 'Built REST endpoints with Symfony 5 and implemented service business logic.', 'Worked with the database through Doctrine ORM: updated models and created and applied migrations.', 'Built analytics widgets and visualizations with Vue 2 and D3.js, adding report filters and localization.'],
     personal: 'PERSONAL PROJECTS', learning: 'PRACTICE & LEARNING', personalTitle: 'Vue 3 and Nuxt', personalSuffix: 'personal projects', personalSummary: 'Deepening my work with Composition API, TypeScript, state management, loading optimization, and interface animation.',
     education: 'EDUCATION', bachelor: 'BACHELOR’S · CLASS OF 2026', degree: 'Software Engineering', educationSummary: 'Master’s studies at Igor Sikorsky Kyiv Polytechnic Institute since 2026; bachelor’s in Computer Engineering from the National Aviation University, class of 2026.', next: 'WHAT’S NEXT', team: 'Could this be <span class="serif-accent">our team?</span>', message: 'Message me',
